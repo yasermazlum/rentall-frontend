@@ -1,0 +1,46 @@
+<div *ngIf="dataLoaded == false" class="container center">
+  <div class="spinner-border text-danger" role="status">
+    <span class="visually-hidden">Yukleniyor...</span>
+  </div>
+  <span class="visually">Yukleniyor...</span>
+</div>
+<div *ngFor="let c of cars" class="card col-md-3">
+  <div class="card-body flex-column p-3 text-white bg-dark">
+    <div class="card-header">
+      <h2 class="card-title">{{ c.carName }}</h2>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-success">
+        Marka : {{ c.brandName }}
+      </li>
+      <li class="list-group-item list-group-item-success">
+        Renk : {{ c.colorName }}
+      </li>
+      <li class="list-group-item list-group-item-success">
+        Model Yılı : {{ c.modelYear }}
+      </li>
+      <li class="list-group-item list-group-item-success">
+        Kira Ücreti : {{ c.dailyPrice }}
+      </li>
+      <li class="list-group-item list-group-item-success">
+        Açıklama : {{ c.description }}
+      </li>
+    </ul>
+    <div class="card-footer row p-3 text-white bg-dark">
+      <button
+        type="button"
+        class="btn btn-warning d-flex flex-row"
+        id="left-panel-link"
+      >
+        Detaylar
+      </button>
+      <button
+        type="button"
+        class="btn btn-success d-flex flex-row-reverse"
+        id="right-panel-link"
+      >
+        Kirala
+      </button>
+    </div>
+  </div>
+</div>
